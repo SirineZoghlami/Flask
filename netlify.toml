@@ -1,5 +1,5 @@
 [build]
-  command = "docker build -t flask-app ."
+  command = "./build.sh"
   functions = "functions"
 
 [dev]
