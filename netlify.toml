@@ -1,0 +1,11 @@
+[build]
+  command = "docker build -t flask-app ."
+  functions = "functions"
+
+[dev]
+  command = "docker run -p 5000:5000 flask-app"
+
+[[redirects]]
+  from = "/predict"
+  to = "/.netlify/functions/predict"
+  status = 200
