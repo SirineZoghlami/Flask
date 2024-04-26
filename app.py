@@ -7,7 +7,8 @@ app = Flask(__name__)
 with open('best_gb_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
-@app.route('/.netlify/functions/predict', methods=['POST'])
+# Define API endpoint
+@app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
     pression_1 = data['pression_1']
