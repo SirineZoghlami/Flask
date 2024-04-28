@@ -3,6 +3,9 @@
     "builds": [
         {"src": "app.py", "use": "@vercel/python"}
     ],
+    "build": {
+    "command": false
+  },
     "routes": [
         {"src": "/(.*)", "dest": "app.py"}
     ]
